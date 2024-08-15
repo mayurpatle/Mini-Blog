@@ -1,5 +1,9 @@
 const  express =  require('express')  ;  
 const dotenv  = require('dotenv')  ; 
+const connectDB = require('./config/db');
+
+// Connect to the  local mongodb database 
+connectDB()   ;  
 
 // load  environment variables 
 dotenv.config()  ; 
