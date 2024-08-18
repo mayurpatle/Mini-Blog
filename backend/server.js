@@ -13,7 +13,10 @@ const app   =  express() ;
  
 
 // middleware  to  parse json req 
-app.use(express.json())   ; 
+app.use(express.json())   ;
+
+// Define routes
+app.use('/api/auth', require('./routes/auth'));
 
 // Simple logger middleware
 app.use((req, res, next) => {
